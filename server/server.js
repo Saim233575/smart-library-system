@@ -8,9 +8,7 @@ const bookRoutes = require('./routes/bookRoutes');
 const app = express();
 
 /**
- * ==========================================
  * MIDDLEWARE CONFIGURATION
- * ==========================================
  */
 
 // Parse incoming JSON request bodies
@@ -24,9 +22,7 @@ app.use(cors({
 }));
 
 /**
- * ==========================================
  * DATABASE CONNECTION
- * ==========================================
  */
 
 // Connect to MongoDB Atlas
@@ -44,9 +40,7 @@ const connectDB = async () => {
 };
 
 /**
- * ==========================================
  * API ROUTES
- * ==========================================
  */
 
 // Health check endpoint

@@ -118,7 +118,7 @@ const App = () => {
       {/* Header Section */}
       <header className="app-header">
         <div className="header-content">
-          <h1>📚 Smart Library Management System</h1>
+          <h1> Smart Library Management System</h1>
           <p>Efficiently manage your book collection</p>
         </div>
       </header>
@@ -129,7 +129,7 @@ const App = () => {
           {/* Error Message Display */}
           {errorMessage && (
             <div className="error-banner">
-              <span>⚠️ {errorMessage}</span>
+              <span> {errorMessage}</span>
               <button 
                 onClick={() => setErrorMessage('')}
                 className="error-close"
