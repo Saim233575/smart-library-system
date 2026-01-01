@@ -90,36 +90,6 @@ npm start
 
 The application will open automatically at `http://localhost:3000`
 
-##  How to Use
-
-### Adding a Book
-
-1. Fill out the form with:
-   - **Book Title** - Name of the book
-   - **Author Name** - Author of the book
-   - **ISBN Number** - Unique identifier (13 digits)
-   - **Publication Year** - Year the book was published
-
-2. Click the **"Add Book"** button
-3. The book will appear instantly in the library list below
-
-### Viewing Books
-
-- All books are displayed in a responsive card layout
-- Each card shows:
-  - Book title
-  - Author name
-  - ISBN number
-  - Publication year
-- Books are sorted by most recently added first
-
-### Deleting a Book
-
-1. Find the book in the library list
-2. Click the red **"Delete"** button on the book card
-3. Confirm the deletion in the popup
-4. The book will be removed from the library
-
 ## API Documentation
 
 ### Base URL
@@ -218,28 +188,6 @@ DELETE /api/books/:id
   "message": "Book not found. It may have already been deleted."
 }
 ```
-
-##  Design Features
-
-### Responsive Design
-- **Mobile (320px+)** - Single column layout, optimized touch targets
-- **Tablet (768px+)** - Two column grid layout
-- **Desktop (1200px+)** - Multi-column responsive grid
-
-### Styling
-- Modern gradient backgrounds (purple/blue theme)
-- Smooth transitions and hover effects
-- Clear visual hierarchy
-- Accessible color contrast
-- Mobile-first approach
-
-### User Experience
-- Loading states for async operations
-- Error messages with close button
-- Confirmation dialogs for destructive actions
-- Input validation and feedback
-- Disabled states during API requests
-
 ##  Error Handling
 
 ### Frontend Error Handling
@@ -269,29 +217,6 @@ DELETE /api/books/:id
 // Server error
 "Failed to add book. Please try again later."
 ```
-
-##  Code Comments
-
-All code includes meaningful comments explaining:
-- Purpose of functions and components
-- Props and parameters
-- State management logic
-- API communication
-- Error handling strategies
-- Complex algorithms
-
-## Deployment
-
-### Deploy Backend to Heroku
-
-1. Create Heroku account at [heroku.com](https://heroku.com)
-2. Install Heroku CLI
-3. Login: `heroku login`
-4. Create app: `heroku create your-app-name`
-5. Set environment variables: `heroku config:set MONGODB_URI=...`
-6. Deploy: `git push heroku main`
-
-
 ### Environment Variables for Production
 ```env
 # Frontend (.env file in client folder)
