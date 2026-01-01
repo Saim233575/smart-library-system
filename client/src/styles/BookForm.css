@@ -1,0 +1,138 @@
+/**
+ * BookForm Styles
+ * Responsive form styling for desktop and mobile (320px+)
+ */
+
+.book-form-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3rem;
+}
+
+.book-form-container h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.book-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Form Group Styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ffd700;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.form-group input:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Submit Button */
+.submit-btn {
+  padding: 1rem 2rem;
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #ffed4e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(255, 215, 0, 0.3);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/**
+ * Responsive Design - Tablet (768px+)
+ */
+@media (min-width: 768px) {
+  .book-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .book-form input[type="text"]:last-of-type,
+  .book-form input[type="number"] {
+    grid-column: 1 / 2;
+  }
+
+  .submit-btn {
+    grid-column: 1 / -1;
+  }
+}
+
+/**
+ * Responsive Design - Mobile (320px - 767px)
+ */
+@media (max-width: 767px) {
+  .book-form-container {
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .book-form-container h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group {
+    gap: 0.3rem;
+  }
+
+  .form-group input {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}

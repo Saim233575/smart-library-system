@@ -1,0 +1,216 @@
+/**
+ * BookList Styles
+ * Responsive card layout styling (320px+)
+ */
+
+.book-list-container {
+  padding: 2rem;
+}
+
+.book-list-container h2 {
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+/* Empty State Message */
+.empty-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Loading Message */
+.loading-message {
+  text-align: center;
+  padding: 2rem;
+  color: #667eea;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Books Grid Layout */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual Book Card */
+.book-card {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.25);
+  transform: translateY(-4px);
+}
+
+/* Book Card Content */
+.book-card-content {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.book-title {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.book-author,
+.book-isbn,
+.book-year {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+  word-break: break-word;
+}
+
+.book-author strong,
+.book-isbn strong,
+.book-year strong {
+  color: #333;
+  font-weight: 700;
+}
+
+/* Delete Button */
+.delete-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #ff6b6b;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background-color: #ff5252;
+  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.3);
+  transform: scale(1.02);
+}
+
+.delete-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.delete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/**
+ * Responsive Design - Tablet (768px+)
+ */
+@media (min-width: 768px) {
+  .book-list-container {
+    padding: 2.5rem;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .book-card {
+    padding: 2rem;
+  }
+}
+
+/**
+ * Responsive Design - Mobile (320px - 767px)
+ */
+@media (max-width: 767px) {
+  .book-list-container {
+    padding: 1rem;
+  }
+
+  .book-list-container h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .book-card {
+    padding: 1rem;
+  }
+
+  .book-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .book-author,
+  .book-isbn,
+  .book-year {
+    font-size: 0.9rem;
+    margin: 0.4rem 0;
+  }
+
+  .delete-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .empty-message {
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+/**
+ * Responsive Design - Very Small Devices (320px - 399px)
+ */
+@media (max-width: 399px) {
+  .book-list-container {
+    padding: 0.8rem;
+  }
+
+  .book-list-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .book-card {
+    padding: 0.8rem;
+  }
+
+  .book-title {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .book-author,
+  .book-isbn,
+  .book-year {
+    font-size: 0.85rem;
+  }
+
+  .delete-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}

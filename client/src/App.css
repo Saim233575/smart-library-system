@@ -1,0 +1,229 @@
+/**
+ * Global App Styles
+ * Responsive layout for the Smart Library Management System
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/**
+ * Header Styles
+ */
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.header-content p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/**
+ * Main Content Area
+ */
+.app-main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/**
+ * Error Banner
+ */
+.error-banner {
+  background-color: #ffebee;
+  border-left: 4px solid #ff5252;
+  color: #c62828;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideDown 0.3s ease;
+}
+
+.error-banner span {
+  font-weight: 600;
+}
+
+.error-close {
+  background: none;
+  border: none;
+  color: #c62828;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.error-close:hover {
+  opacity: 0.8;
+}
+
+/**
+ * Footer Styles
+ */
+.app-footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
+
+/**
+ * Animations
+ */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/**
+ * Responsive Design - Tablet (768px+)
+ */
+@media (min-width: 768px) {
+  .app-header {
+    padding: 3rem 2rem;
+  }
+
+  .header-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .app-main {
+    padding: 3rem 2rem;
+  }
+}
+
+/**
+ * Responsive Design - Mobile (320px - 767px)
+ */
+@media (max-width: 767px) {
+  .app {
+    min-height: 100vh;
+  }
+
+  .app-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .header-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .header-content p {
+    font-size: 0.95rem;
+  }
+
+  .app-main {
+    padding: 1rem;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .error-banner {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    align-items: flex-start;
+    padding: 0.8rem 1rem;
+  }
+
+  .error-banner span {
+    width: 100%;
+    text-align: left;
+  }
+
+  .error-close {
+    align-self: flex-end;
+  }
+
+  .app-footer {
+    margin-top: 2rem;
+    padding: 1.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/**
+ * Responsive Design - Very Small Devices (320px - 399px)
+ */
+@media (max-width: 399px) {
+  .app-header {
+    padding: 1rem 0.8rem;
+  }
+
+  .header-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .header-content p {
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+  }
+
+  .app-main {
+    padding: 0.8rem;
+  }
+}
+
+/**
+ * Scrollbar Styling (Optional - Modern Browsers)
+ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
